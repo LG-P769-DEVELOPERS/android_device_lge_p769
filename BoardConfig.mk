@@ -16,14 +16,14 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 NEEDS_ARM_ERRATA_754319_754320 := true
 BOARD_GLOBAL_CFLAGS += -DNEEDS_ARM_ERRATA_754319_754320
 
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_p769_defconfig
 #TARGET_KERNEL_SOURCE := kernel/lge/lge-kernel-omap4
-TARGET_KERNEL_SOURCE := kernel/lge/lge-kernel-p769-ocuv
+TARGET_KERNEL_SOURCE := kernel/lge/omap4-common
 
 # toolchain for kernel, must be in prebuilt\linux-x86\toolchain\
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7
