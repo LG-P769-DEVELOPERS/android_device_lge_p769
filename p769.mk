@@ -40,10 +40,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ipc_channels.config:system/etc/ipc_channels.config
 
-# NFC stuffs
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
@@ -124,18 +120,8 @@ PRODUCT_PACKAGES += \
     libomap_mm_library_jni \
     libtimemmgr
 
-# NFC packages
-#PRODUCT_PACKAGES += \
-#    libnfc \
-#    libnfc_jni \
-#    Nfc \
-#    Tag
-
 FRAMEWORKS_BASE_SUBDIRS += \
 	$(addsuffix /java, omapmmlib )
-
-#FRAMEWORKS_BASE_SUBDIRS += \
-#	../../$(LOCAL_PATH)/framework-addons/
 
 PRODUCT_PACKAGES += \
     libskiahwdec \
@@ -143,10 +129,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libstagefrighthw
-
-#copy firmware
-#PRODUCT_COPY_FILES += \
-#  system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
 # Charger mode
 PRODUCT_PACKAGES += \
